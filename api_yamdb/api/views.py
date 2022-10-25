@@ -1,36 +1,27 @@
 import random
 import string
 
+from django.conf import settings
 from django.core.mail import send_mail
 from django.db.models import Avg
 from django.shortcuts import get_object_or_404
-from django.conf import settings
-from rest_framework import viewsets, filters, status, permissions
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework.views import APIView
+from rest_framework import filters, permissions, status, viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
+from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import AccessToken
-
-from reviews.models import Category, Genre, Title, Review
+from reviews.models import Category, Genre, Review, Title
 from users.models import User
-from .serializers import (CategorySerializer,
-                          GenreSerializer,
-                          TitleSerializer,
-                          ReadOnlyTitleSerializer,
-                          UserSerializer,
-                          AuthUserSerializer,
-                          TokenSerializer,
-                          ReviewSerializer,
-                          CommentSerializer
-                          )
-from .mixins import CreateListDestroyViewSet
-from .filters import TitleFilter
-from .permissions import (IsAdminModeratorAuthorOrReadOnly,
-                          IsAdmin,
-                          IsMe,
-                          IsAdminOrReadOnly)
 
+from .filters import TitleFilter
+from .mixins import CreateListDestroyViewSet
+from .permissions import (IsAdmin, IsAdminModeratorAuthorOrReadOnly,
+                          IsAdminOrReadOnly, IsMe)
+from .serializers import (AuthUserSerializer, CategorySerializer,
+                          CommentSerializer, GenreSerializer,
+                          ReadOnlyTitleSerializer, ReviewSerializer,
+                          TitleSerializer, TokenSerializer, UserSerializer)
 
 CONFIRMATION_CODE_LEN = 8
 
