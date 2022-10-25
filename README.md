@@ -52,3 +52,6 @@ alexbulavkin
 
 ### Стек технологий
 gunicorn, Nginx, Docker, docker-compose, PostgreSQL
+
+https://github.com/alexbulavkin/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg
+
