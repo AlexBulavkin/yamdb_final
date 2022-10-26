@@ -53,4 +53,3 @@ gunicorn, Nginx, Docker, docker-compose, PostgreSQL
 
 ### Workflow
 ![result of workflow](https://github.com/alexbulavkin/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
-
