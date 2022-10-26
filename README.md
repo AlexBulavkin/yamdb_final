@@ -2,7 +2,6 @@
 
 Проект YaMDb собирает отзывы пользователей на произведения. Произведения разделяются по категриям и жанрам.
 
-
 ### Шаблон наполнения env-файла
 ```
 SECRET_KEY=p&l%385148kslhtyn^##a1)ilz@4zqj=rq&agdol^##zgl9(vs
@@ -25,7 +24,6 @@ cd infra/
 
 ```
 docker-compose up -d --build
-
 ```
 
 Проведите миграции:
@@ -53,5 +51,5 @@ alexbulavkin
 ### Стек технологий
 gunicorn, Nginx, Docker, docker-compose, PostgreSQL
 
-![result of workflow](https://github.com/alexbulavkin/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
-
+### Workflow
+![result of workflow](https://github.com/alexbulavkin/yamdb/actions/workflows/yamdb_workflow.yml/badge.svg)
