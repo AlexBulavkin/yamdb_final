@@ -12,7 +12,7 @@ SECRET_KEY = os.getenv('SECRET_KEY',
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['web']
+ALLOWED_HOSTS = ['62.84.124.20']
 
 
 # Application definition
